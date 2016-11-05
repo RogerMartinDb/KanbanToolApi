@@ -1,0 +1,18 @@
+{
+  "id": 259036,
+  "position": 4,
+  "name": "squanch",
+  "description": "The guys who are bringing you Metric Gaming",
+  "version": 225,
+  "created_at": "2016-10-07T08:57:05.000+01:00",
+  "updated_at": "2016-11-05T05:56:34.000+00:00",
+  "settings_updated_at": "2016-10-28T16:42:33.000+01:00",
+  "account_id": 149274,
+  "folder_id": null,
+  "last_activity_on": "2016-11-04",
+  "deleted_at": null,
+  "external_id_sequence": 1,
+  "board_template_id": "258918",
+  "cumulative_flow_updated_at": "2016-11-05T05:56:34.000+00:00",
+  "owner_id": 260364
+}

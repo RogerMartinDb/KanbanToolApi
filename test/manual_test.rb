@@ -1,5 +1,5 @@
 require 'pp'
-require_relative 'api'
+require_relative '../lib/api'
 require_relative 'util'
 
 api = Api.new
@@ -12,7 +12,7 @@ util.print_boards boards
 
 puts "select named board"
 named_boards = util.to_named boards
-board = named_boards['core']
+board = named_boards['Core']
 
 puts '________________________________________'
 puts "board settings for board #{board['name']}:"

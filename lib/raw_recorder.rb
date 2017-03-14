@@ -1,31 +1,29 @@
-require 'date'
 require 'json'
 require_relative 'api'
+require_relative 'storage'
 
 class RawRecorder
   def initialize root
-    if ! Dir.exist? root
-      raise "Directory #{root} must exit already"
-    end
-
-    now = DateTime.now
-    @root = File.join(root, now.strftime("%Y-%m-%d_%s"))
-    Dir.mkdir @root
+    @storage = Storage.new root
 
     @api = Api.new
   end
 
   def grab_data
+    @store = @storage.open
+
     @api
       .boards
       .each{|board| grab_board board}
     puts 'Done.'
+
+    @storage.close
   end
 
   def grab_board board
     settings = @api.board_settings board
  
-    board_dir = File.join(@root, board['name'])
+    board_dir = File.join(@store, board['name'])
     Dir.mkdir board_dir
 
     json_to_file board_dir, 'board', board

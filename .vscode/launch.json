@@ -7,7 +7,7 @@
       "request": "launch",
       "cwd": "${workspaceRoot}",
       "program": "${workspaceRoot}/record.rb",
-      "args": ["C:\\test"]
+      "args": ["C:\\board\\KBT"]
     },
     {
       "name": "Listen for rdebug-ide",

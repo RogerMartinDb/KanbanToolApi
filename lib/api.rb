@@ -59,7 +59,7 @@ class Api
   # see, http://kanbantool.com/about/api#interface
   def unwrapJSON(raw, wrapper)
     if raw.is_a?(Array) 
-      raw.map {|e| e[wrapper]}
+      raw.map {|e| e[wrapper].nil? ? e : e[wrapper]}
     else
       raw[wrapper]
     end

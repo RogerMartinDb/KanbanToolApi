@@ -22,10 +22,12 @@ class Storage
 
     @final = File.join(@root, dir_name)
 
+    puts "storage opened at #{@store}"
     @store
   end
 
   def close
     FileUtils.mv @store, @final
+    puts "storage closed at #{@final}"
   end
 end

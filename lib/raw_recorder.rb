@@ -23,7 +23,7 @@ class RawRecorder
   def grab_board board
     settings = @api.board_settings board
  
-    board_dir = File.join(@store, board['name'])
+    board_dir = File.join(@store, board['name'].strip)
     Dir.mkdir board_dir
 
     json_to_file board_dir, 'board', board
